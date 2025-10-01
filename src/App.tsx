@@ -1,23 +1,24 @@
 // import './App.css';
 import { NavLink, Route, Routes } from 'react-router-dom';
-import { PageWelcome } from './components/PageWelcome';
-import { PageInfo } from './components/PageInfo';
-import { PageAbout } from './components/PageAbout';
+import { PageDashboard } from './components/PageDashboard';
+import { PageJobs } from './components/PageJobs';
+import { PageSkills } from './components/PageSkills';
 
 function App() {
   return (
     <div className="App">
       <h1>React-Vite-Typescript-FRONTEND</h1>
+
       <nav>
-        <NavLink to="welcome">Welcome</NavLink>
-        <NavLink to="info">Info</NavLink>
-        <NavLink to="about">About</NavLink>
+        <NavLink to="dashboard">Dashboard</NavLink>
+        <NavLink to="jobs">Jobs</NavLink>
+        <NavLink to="skills">Skills</NavLink>
       </nav>
 
       <Routes>
-        <Route path="welcome" element={<PageWelcome />}></Route>
-        <Route path="info" element={<PageInfo />}></Route>
-        <Route path="about" element={<PageAbout />}></Route>
+        <Route path="dashboard" element={<PageDashboard />}></Route>
+        <Route path="jobs" element={<PageJobs />}></Route>
+        <Route path="skills" element={<PageSkills />}></Route>
       </Routes>
     </div>
   );
