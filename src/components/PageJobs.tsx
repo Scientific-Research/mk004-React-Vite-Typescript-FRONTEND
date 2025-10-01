@@ -19,7 +19,9 @@ export const PageJobs = () => {
         {Jobs.map((job) => (
           <div className="job">
             <React.Fragment key={job.id}>
-              <h2>{job.title}</h2>
+              <a href={job.url} target="_blank">
+                <h2>{job.title}</h2>
+              </a>
               <h4>{job.company}</h4>
               <p className="description">{job.description}</p>
               <p className="skillList">{job.skillList}</p>
