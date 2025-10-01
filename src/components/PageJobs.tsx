@@ -16,7 +16,7 @@ export const PageJobs = () => {
     <div className="pageJobs">
       <h2>There are {Jobs.length} jobs:</h2>
       <div className="jobs">
-        {Jobs.map((job) => (
+        {Jobs.map((job: IJobs) => (
           <div className="job">
             <React.Fragment key={job.id}>
               <a href={job.url} target="_blank">
