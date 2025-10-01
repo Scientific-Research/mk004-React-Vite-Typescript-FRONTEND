@@ -14,16 +14,16 @@ interface IJobs {
 export const PageJobs = () => {
   return (
     <div className="pageJobs">
-      <h1>There are {Jobs.length} jobs:</h1>
+      <h2>There are {Jobs.length} jobs:</h2>
       <div className="jobs">
         {Jobs.map((job) => (
           <div className="job">
             <React.Fragment key={job.id}>
               <h2>{job.title}</h2>
-              <p>{job.company}</p>
-              <p>{job.description}</p>
-              <p>{job.skillList}</p>
-              <p>{job.todo}</p>
+              <h4>{job.company}</h4>
+              <p className="description">{job.description}</p>
+              <p className="skillList">{job.skillList}</p>
+              <p className="todo">{job.todo}</p>
             </React.Fragment>
           </div>
         ))}
