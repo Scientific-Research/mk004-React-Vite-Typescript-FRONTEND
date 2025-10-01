@@ -36,4 +36,14 @@ body {
       color: green;
     }
   }
+
+  .pageJobs {
+    .jobs {
+      .job {
+        background-color: #222;
+        margin: 1rem 0;
+        padding: 1rem;
+      }
+    }
+  }
 }
