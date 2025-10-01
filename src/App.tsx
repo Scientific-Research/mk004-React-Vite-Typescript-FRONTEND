@@ -1,5 +1,5 @@
 // import './App.css';
-import { NavLink, Route, Routes } from 'react-router-dom';
+import { Navigate, NavLink, Route, Routes } from 'react-router-dom';
 import { PageDashboard } from './components/PageDashboard';
 import { PageJobs } from './components/PageJobs';
 import { PageSkills } from './components/PageSkills';
@@ -19,6 +19,7 @@ function App() {
         <Route path="dashboard" element={<PageDashboard />}></Route>
         <Route path="jobs" element={<PageJobs />}></Route>
         <Route path="skills" element={<PageSkills />}></Route>
+        <Route path="/" element={<Navigate to="dashboard" />}></Route>
       </Routes>
     </div>
   );
