@@ -7,7 +7,7 @@ import { PageSkills } from './components/PageSkills';
 function App() {
   return (
     <div className="App">
-      <h1>React-Vite-Typescript-FRONTEND</h1>
+      <h1>Get a Job</h1>
 
       <nav>
         <NavLink to="dashboard">Dashboard</NavLink>
