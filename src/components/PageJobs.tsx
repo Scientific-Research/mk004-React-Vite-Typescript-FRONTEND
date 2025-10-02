@@ -17,31 +17,31 @@ export const PageJobs = () => {
 
   useEffect(() => {
     (async () => {
-      const jobs = (await axios.get('http://localhost:8000/jobs')).data;
-      console.log(jobs);
-      // const _jobs = ...{jobs}
-      // setJobs(...jobs);
+      const jobs_API = (await axios.get('http://localhost:8000/jobs')).data;
+      console.log(jobs_API);
+      const _jobs = [...jobs_API];
+      setJobs(_jobs);
     })();
   }, []);
 
-  // return (
-  //   <div className="pageJobs">
-  //     <h2>There are {Jobs.length} jobs:</h2>
-  //     <div className="jobs">
-  //       {Jobs.map((job: IJobs) => (
-  //         <div className="job">
-  //           <React.Fragment key={job.id}>
-  //             <a href={job.url} target="_blank">
-  //               <h2>{job.title}</h2>
-  //             </a>
-  //             <h4>{job.company}</h4>
-  //             <p className="description">{job.description}</p>
-  //             <p className="skillList">{job.skillList}</p>
-  //             <p className="todo">{job.todo}</p>
-  //           </React.Fragment>
-  //         </div>
-  //       ))}
-  //     </div>
-  //   </div>
-  // );
+  return (
+    <div className="pageJobs">
+      <h2>There are {jobs.length} jobs:</h2>
+      <div className="jobs">
+        {jobs.map((job: IJobs) => (
+          <div className="job" key={job.id}>
+            <>
+              <a href={job.url} target="_blank">
+                <h2>{job.title}</h2>
+              </a>
+              <h4>{job.company}</h4>
+              <p className="description">{job.description}</p>
+              <p className="skillList">{job.skillList}</p>
+              <p className="todo">{job.todo}</p>
+            </>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
 };
