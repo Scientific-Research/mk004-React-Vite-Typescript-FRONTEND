@@ -12,8 +12,19 @@ interface IJobs {
   todo: string;
 }
 
+const jobs_defaultValues = {
+  id: null,
+  title: 'NONE',
+  company: 'NONE',
+  url: 'NONE',
+  description: 'NONE',
+  skillList: 'NONE',
+  todo: 'NONE',
+};
+
 export const PageJobs = () => {
-  const [jobs, setJobs] = useState<IJobs[]>([]);
+  const [jobs, setJobs] = useState<IJobs[]>([]); // without default value
+  // const [jobs, setJobs] = useState([jobs_defaultValues]); // or with default value
 
   useEffect(() => {
     (async () => {
@@ -28,7 +39,7 @@ export const PageJobs = () => {
     <div className="pageJobs">
       <h2>There are {jobs.length} jobs:</h2>
       <div className="jobs">
-        {jobs.map((job: IJobs) => (
+        {jobs.map((job) => (
           <div className="job" key={job.id}>
             <>
               <a href={job.url} target="_blank">
